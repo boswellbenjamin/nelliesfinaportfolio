@@ -1,3 +1,5 @@
+import Link from 'next/link';
+import Image from 'next/image';
 
 interface Project {
   id: string;
@@ -11,10 +13,11 @@ interface Project {
 const ProjectCard = ({ project }: { project: Project }) => (
   <div className="bg-white rounded-3xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl">
     <div className="relative aspect-video">
-      <img 
+      <Image 
         src={project.imageUrl} 
         alt={project.title}
-        className="absolute inset-0 w-full h-full object-cover"
+        fill
+        className="object-cover"
       />
     </div>
     
@@ -31,12 +34,12 @@ const ProjectCard = ({ project }: { project: Project }) => (
       <h3 className="text-2xl font-semibold text-gray-900">{project.title}</h3>
       <p className="text-gray-600">{project.description}</p>
       
-      <a 
-        href={`/projects/${project.id}`}
-        className="inline-flex items-center justify-center w-full gap-2 px-6 py-3 mt-4 text-center text-white bg-black rounded-full hover:bg-black/90 transition-all"
-      >
-        View Case Study
-      </a>
+      <Link 
+  href={`/projects/project${project.id}`}
+  className="inline-flex items-center justify-center w-full gap-2 px-6 py-3 mt-4 text-center text-white bg-black rounded-full hover:bg-black/90 transition-all"
+>
+  View Case Study
+</Link>
     </div>
   </div>
 );
