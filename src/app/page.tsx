@@ -18,7 +18,7 @@ async function getProjects() {
       id: '1',
       title: 'Project Name',
       description: 'UX Research • Interface Design',
-      imageUrl: '/next.svg',
+      imageUrl: '/picpic.jpg',
       category: 'Mobile App',
       year: '2024'
     },
@@ -26,7 +26,7 @@ async function getProjects() {
       id: '2',
       title: 'Another Project',
       description: 'Product Design • User Testing',
-      imageUrl: '/next.svg',
+      imageUrl: '/picpic.jpg',
       category: 'Web App',
       year: '2024'
     },
@@ -34,7 +34,7 @@ async function getProjects() {
       id: '3',
       title: 'Third Project',
       description: 'UI Design • Development',
-      imageUrl: '/next.svg',
+      imageUrl: '/picpic.jpg',
       category: 'Desktop App',
       year: '2023'
     },

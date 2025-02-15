@@ -7,7 +7,7 @@ import {
   Timer,
   User,
   Wrench,
-  ArrowRight
+  MessageCircle
 } from 'lucide-react';
 
 const ProjectDetailPage: React.FC = () => {
@@ -30,12 +30,12 @@ const ProjectDetailPage: React.FC = () => {
             <div className="absolute left-0 bottom-0 w-64 h-64 rounded-full bg-yellow-100 mix-blend-multiply filter blur-xl opacity-70" />
 
             <div className="max-w-4xl relative z-10">
-              <p className="text-blue-600 font-medium mb-6 tracking-wide">CASE STUDY — 2025</p>
+              <p className="text-blue-600 font-medium mb-6 tracking-wide">Project 1 — 2025</p>
               <h1 className="text-8xl font-bold tracking-tight leading-none mb-8">
-                Reimagining Digital Banking
+                This is a test project
               </h1>
               <p className="text-xl text-gray-600 max-w-xl mb-12">
-                A revolutionary approach to personal banking that challenges traditional interfaces.
+                This is just a text to show that there can be text here, there can also be a lot of text here and it still looks good!.
               </p>
 
               {/* Project Details Pills */}
@@ -54,7 +54,11 @@ const ProjectDetailPage: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-2 bg-purple-50 text-purple-800 px-4 py-2 rounded-full">
                   <Wrench className="w-4 h-4 text-purple-600" />
-                  <span className="font-medium">Figma, Principle, Framer</span>
+                  <span className="font-medium">Figma</span>
+                </div>
+                <div className="flex items-center gap-2 bg-orange-50 text-orange-800 px-4 py-2 rounded-full">
+                  <MessageCircle className="w-4 h-4 text-orange-600" />
+                  <span className="font-medium">Interviews, this can also be long</span>
                 </div>
               </div>
             </div>
@@ -70,22 +74,16 @@ const ProjectDetailPage: React.FC = () => {
               <div className="max-w-3xl">
                 <h2 className="text-7xl font-bold mb-12 tracking-tight">Overview</h2>
                 <p className="text-xl text-gray-600 leading-relaxed mb-16">
-                  Through extensive research and iterative design, we crafted a banking experience
-                  that puts user needs first while maintaining the robustness required for financial operations.
+                  Through extensive research and iterative design, we crafted a test experience
+                  that puts user needs first while maintaining the robustness required for test operations.
                 </p>
                 <div className="grid grid-cols-2 gap-8">
                   <div className="aspect-[4/3] overflow-hidden rounded-xl group relative">
                     <img 
-                      src="/api/placeholder/600/450"
-                      alt="Banking interface"
-                      className="object-cover w-full h-full transform transition-transform duration-700 group-hover:scale-110"
+                      src="https://picsum.photos/600/450"
+                      alt="Banking interface" 
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent
-                                  opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                       <div className="absolute bottom-6 left-6 text-white">
-                        <p className="font-medium text-lg">User Interface</p>
-                        <p className="text-sm text-gray-300">Final Design</p>
-                      </div>
                     </div>
                   </div>
                   <div className="grid grid-rows-2 gap-8">
@@ -139,12 +137,12 @@ const ProjectDetailPage: React.FC = () => {
                   </div>
                   <div className="space-y-24">
                     <img 
-                      src="/api/placeholder/600/800"
+                      src="https://picsum.photos/600/800"
                       alt="Design process 1"
                       className="rounded-xl shadow-2xl"
                     />
                     <img 
-                      src="/api/placeholder/600/800"
+                      src="https://picsum.photos/600/800"
                       alt="Design process 2"
                       className="rounded-xl shadow-2xl"
                     />
@@ -165,7 +163,7 @@ const ProjectDetailPage: React.FC = () => {
                   while maintaining robust security features.
                 </p>
                 <img 
-                  src="/api/placeholder/1200/600"
+                  src="https://picsum.photos/1200/600"
                   alt="Final solution"
                   className="rounded-xl shadow-2xl mb-24"
                 />
