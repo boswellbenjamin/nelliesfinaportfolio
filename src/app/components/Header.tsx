@@ -38,7 +38,7 @@ export default function Header() {
               </Link>
               <Link 
                 href="/contact" 
-                className="text-sm px-4 py-2 bg-black text-white rounded-full hover:bg-black/90 transition-colors"
+                className="text-sm px-4 py-2 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white rounded-full hover:from-violet-700 hover:to-fuchsia-700 transition-all duration-300"
               >
                 Let&apos;s Talk
               </Link>
@@ -103,7 +103,7 @@ export default function Header() {
                 </Link>
                 <Link 
                   href="/contact" 
-                  className="text-2xl font-medium w-full text-center py-4 bg-black text-white rounded-xl hover:bg-black/90 transition-colors"
+                  className="text-2xl font-medium w-full text-center py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white rounded-xl hover:from-violet-700 hover:to-fuchsia-700 transition-all duration-300"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Let&apos;s Talk

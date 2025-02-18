@@ -8,19 +8,24 @@ export interface Project {
     fullDescription?: string;
     techStack?: string[];
     images?: string[];
+    tags?: { text: string; color: string }[];
   }
   
   export const projects: Project[] = [
     {
       id: '1',
-      title: 'Project One',
+      title: 'Project Name',
       description: 'UX Research • Interface Design',
-      imageUrl: '/project1.jpg',
+      imageUrl: '/picpic.jpg',
       category: 'Mobile App',
       year: '2024',
-      fullDescription: 'A detailed look at the first project...',
-      techStack: ['React Native', 'Figma', 'Firebase'],
-      images: ['/project1/image1.jpg', '/project1/image2.jpg']
+      tags: [
+        { text: 'Lead UX/UI Designer', color: 'blue' },
+        { text: 'iOS, Android, Web', color: 'green' },
+        { text: '4 months', color: 'yellow' },
+        { text: 'Figma', color: 'purple' },
+        { text: 'User Interviews', color: 'orange' }
+      ]
     },
     // Add more projects here
   ];

@@ -2,15 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Header from './components/Header';
 import ProjectShowcase from './components/ProjectShowcase';
-
-interface Project {
-  id: string;
-  title: string;
-  description: string;
-  imageUrl: string;
-  category: string;
-  year: string;
-}
+import { Project } from './types';
 
 async function getProjects() {
   const mockProjects: Project[] = [
@@ -20,7 +12,14 @@ async function getProjects() {
       description: 'UX Research • Interface Design',
       imageUrl: '/picpic.jpg',
       category: 'Mobile App',
-      year: '2024'
+      year: '2024',
+      tags: [
+        { text: 'Lead UX/UI Designer', color: 'blue' },
+        { text: 'iOS, Android, Web', color: 'green' },
+        { text: '4 months', color: 'yellow' },
+        { text: 'Figma', color: 'purple' },
+        { text: 'User Interviews', color: 'orange' }
+      ]
     },
     {
       id: '2',
@@ -28,7 +27,12 @@ async function getProjects() {
       description: 'Product Design • User Testing',
       imageUrl: '/picpic.jpg',
       category: 'Web App',
-      year: '2024'
+      year: '2024',
+      tags: [
+        { text: 'Product Designer', color: 'blue' },
+        { text: 'Web Platform', color: 'green' },
+        { text: '3 months', color: 'yellow' }
+      ]
     },
     {
       id: '3',
@@ -36,8 +40,13 @@ async function getProjects() {
       description: 'UI Design • Development',
       imageUrl: '/picpic.jpg',
       category: 'Desktop App',
-      year: '2023'
-    },
+      year: '2023',
+      tags: [
+        { text: 'UI Designer', color: 'blue' },
+        { text: 'Desktop App', color: 'green' },
+        { text: '2 months', color: 'yellow' }
+      ]
+    }
   ];
   
   return mockProjects;
@@ -57,12 +66,12 @@ export default async function Home() {
               {/* Left Column - Text Content */}
               <div className="order-2 md:order-1">
                 <div className="flex items-center gap-4 mb-8">
-                  <div className="h-px w-12 bg-black"></div>
-                  <span className="text-sm font-medium">UX/UI Designer</span>
-                  <div className="h-px w-12 bg-black"></div>
+                  <div className="h-px w-12 bg-violet-600"></div>
+                  <span className="text-sm font-medium text-violet-600">UX/UI Designer</span>
+                  <div className="h-px w-12 bg-violet-600"></div>
                 </div>
                 
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight bg-black inline-block text-transparent bg-clip-text">
                   Creating digital experiences with purpose
                 </h1>
                 
@@ -73,16 +82,22 @@ export default async function Home() {
                 <div className="flex flex-col sm:flex-row gap-6 mb-8">
                   <Link 
                     href="#work" 
-                    className="inline-flex items-center justify-center px-6 py-3 bg-black text-white rounded-full hover:bg-black/90 transition-all"
+                    className="group inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white rounded-full hover:from-violet-700 hover:to-fuchsia-700 transition-all duration-300"
                   >
                     View My Work
-                    <svg className="ml-2 w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <svg 
+                      className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" 
+                      viewBox="0 0 24 24" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      strokeWidth="2"
+                    >
                       <path d="M5 12h14M12 5l7 7-7 7"/>
                     </svg>
                   </Link>
                   <Link 
                     href="/process" 
-                    className="inline-flex items-center justify-center px-6 py-3 border border-black rounded-full hover:bg-black/5 transition-all"
+                    className="inline-flex items-center justify-center px-8 py-3 border-2 border-violet-200 text-violet-600 rounded-full hover:bg-violet-50 hover:border-violet-300 transition-all duration-300"
                   >
                     My Process
                   </Link>
